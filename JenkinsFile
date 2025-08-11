@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/your-username/your-repo.git'
+                git branch: 'master',
+                    url: 'https://github.com/heenatabassum31/demoRepo.git',
+                    credentialsId: 'github-creds' // <-- Add your GitHub credentials ID here
             }
         }
 
